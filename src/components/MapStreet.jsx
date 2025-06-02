@@ -133,7 +133,7 @@ export default function MapStreet() {
   const mapRef = useRef(null);
 
   useEffect(() => {
-    fetch("data/mabaar_5ord_tr_FeaturesToJSO1.geojson")
+    fetch("./data/mabaar_5ord_tr_FeaturesToJSO1.geojson")
       .then((res) => res.json())
       .then((data) => {
         setGeoData(data);

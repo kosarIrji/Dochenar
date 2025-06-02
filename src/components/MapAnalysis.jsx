@@ -126,7 +126,7 @@ const MapAnalysis = () => {
     baseLayerRef.current = base;
     setMap(initMap);
 
-    fetch("/data/M15_ExportFeat_FeaturesToJSO.geojson")
+    fetch("./data/M15_ExportFeat_FeaturesToJSO.geojson")
       .then((res) => res.json())
       .then((data) => {
         setGeoData(data);
