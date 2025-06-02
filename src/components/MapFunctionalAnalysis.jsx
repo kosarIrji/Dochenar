@@ -62,7 +62,7 @@ const MapLanduse = () => {
     tileLayerRef.current = tileLayer;
     setMapInstance(map);
 
-    fetch("/data/M15_ExportFeat_FeaturesToJSO.geojson")
+    fetch("./data/M15_ExportFeat_FeaturesToJSO.geojson")
       .then((res) => res.json())
       .then((data) => {
         const layer = L.geoJSON(data, {
