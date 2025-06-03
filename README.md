@@ -5,7 +5,6 @@
 
 #----- Tasks to do ----
 
-1. use inputs in json file
+1. change theme combo and and images
 2. try to fix responsive issue of Priority component
-3. change theme combo and and images
-4. add data to charts
+3. add data to charts

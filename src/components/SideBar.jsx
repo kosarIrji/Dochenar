@@ -13,6 +13,7 @@ import {
   Menu,
   X,
   Home,
+  TrendingUp,
 } from "lucide-react";
 
 const menuItems = [
@@ -29,6 +30,11 @@ const menuItems = [
     label: "گالری تصاویر",
     icon: <GalleryHorizontal size={18} />,
   },
+  {
+    id: "priorities",
+    label: "اولویت های سزمایه گذاری",
+    icon: <TrendingUp size={18} />,
+  },
 ];
 
 export default function SideBar() {
@@ -42,8 +48,7 @@ export default function SideBar() {
       <div className="md:hidden fixed top-4 right-4 z-[1001]">
         <button
           onClick={toggleMenu}
-          className="p-4 rounded-full shadow-lg border bg-slate-100"
-        >
+          className="p-4 rounded-full shadow-lg border bg-slate-100">
           {menuOpen ? <X size={28} /> : <Menu size={24} />}
         </button>
       </div>
@@ -62,8 +67,7 @@ export default function SideBar() {
                     href="https://hominex.ir"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-row-reverse items-center justify-end gap-2 text-right text-neutral-100 hover:text-neutral-900 hover:bg-gray-100 rounded-lg px-3 py-2 transition-all cursor-pointer"
-                  >
+                    className="flex flex-row-reverse items-center justify-end gap-2 text-right text-neutral-100 hover:text-neutral-900 hover:bg-gray-100 rounded-lg px-3 py-2 transition-all cursor-pointer">
                     <span className="text-lg font-medium">{item.label}</span>
                     <span>{item.icon}</span>
                   </a>
@@ -75,8 +79,7 @@ export default function SideBar() {
                     spy={true}
                     offset={-100}
                     activeClass="bg--100 text-blue-600 font-bold"
-                    className="flex flex-row-reverse items-center justify-end gap-2 text-right text-neutral-100 hover:text-neutral-900 hover:bg-gray-100 rounded-lg px-3 py-2 transition-all cursor-pointer"
-                  >
+                    className="flex flex-row-reverse items-center justify-end gap-2 text-right text-neutral-100 hover:text-neutral-900 hover:bg-gray-100 rounded-lg px-3 py-2 transition-all cursor-pointer">
                     <span className="text-lg font-medium">{item.label}</span>
                     <span>{item.icon}</span>
                   </ScrollLink>
@@ -89,59 +92,50 @@ export default function SideBar() {
 
       {/* منوی موبایل کشویی */}
       <div
-  className={`fixed top-0 right-0 h-full w-1/2 max-w-xs shadow-2xl transform transition-transform duration-300 ease-in-out z-[9999] bg-white md:hidden ${
-    menuOpen ? "translate-x-0" : "translate-x-full"
-  }`}
->
-  <div className="flex justify-between items-center p-2  border-b">
-    <button
-      onClick={toggleMenu}
-      className="text-gray-800 hover:text-red-500"
-    >
-      <X size={28} />
-    </button>
-    <img
-      src="./images/logo.png"
-      alt="لوگو"
-      className="w-32 h-auto"
-    />
-  </div>
-  <nav className="px-4 py-6">
-    <ul className="space-y-4">
-      {menuItems.map((item) => (
-        <li key={item.id}>
-          {item.external ? (
-            <a
-              href="https://hominex.ir"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={closeMenu}
-              className="flex flex-row-reverse items-center justify-end gap-3 text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-lg px-3 py-2 transition-all"
-            >
-              <span>{item.icon}</span>
-              <span className="text-xl font-medium">{item.label}</span>
-            </a>
-          ) : (
-            <ScrollLink
-              to={item.id}
-              smooth={true}
-              duration={500}
-              spy={true}
-              offset={-100}
-              onClick={closeMenu}
-              activeClass="bg-blue-100 text-blue-600 font-bold"
-              className="flex flex-row-reverse items-center justify-end gap-3 text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-lg px-3 py-2 transition-all"
-            >
-              <span className="text-2xl font-modam">{item.label}</span>
-              <span>{item.icon}</span>
-            </ScrollLink>
-          )}
-        </li>
-      ))}
-    </ul>
-  </nav>
-</div>
-
+        className={`fixed top-0 right-0 h-full w-1/2 max-w-xs shadow-2xl transform transition-transform duration-300 ease-in-out z-[9999] bg-white md:hidden ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        }`}>
+        <div className="flex justify-between items-center p-2  border-b">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-800 hover:text-red-500">
+            <X size={28} />
+          </button>
+          <img src="./images/logo.png" alt="لوگو" className="w-32 h-auto" />
+        </div>
+        <nav className="px-4 py-6">
+          <ul className="space-y-4">
+            {menuItems.map((item) => (
+              <li key={item.id}>
+                {item.external ? (
+                  <a
+                    href="https://hominex.ir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMenu}
+                    className="flex flex-row-reverse items-center justify-end gap-3 text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-lg px-3 py-2 transition-all">
+                    <span>{item.icon}</span>
+                    <span className="text-xl font-medium">{item.label}</span>
+                  </a>
+                ) : (
+                  <ScrollLink
+                    to={item.id}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    offset={-100}
+                    onClick={closeMenu}
+                    activeClass="bg-blue-100 text-blue-600 font-bold"
+                    className="flex flex-row-reverse items-center justify-end gap-3 text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-lg px-3 py-2 transition-all">
+                    <span className="text-2xl font-modam">{item.label}</span>
+                    <span>{item.icon}</span>
+                  </ScrollLink>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </>
   );
 }
