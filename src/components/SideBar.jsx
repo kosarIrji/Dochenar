@@ -54,7 +54,7 @@ export default function SideBar() {
       </div>
 
       {/* سایدبار دسکتاپ */}
-      <aside className="hidden md:flex fixed top-0 right-0 h-full w-56 bg-green-950 shadow-xl z-[1000] flex-col items-center py-6">
+      <aside className="hidden md:flex fixed top-0 right-0 h-full w-56 bg-[var(--sideBar)] shadow-xl z-[1000] flex-col items-center py-6">
         <div className="mb-6">
           <img src="./images/logo.png" alt="لوگو" className="w-40 h-auto" />
         </div>

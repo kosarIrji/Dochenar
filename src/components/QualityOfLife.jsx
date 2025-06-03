@@ -17,7 +17,7 @@ export default function QualityOfLife() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative  bg-white rounded-3xl shadow-lg px-6 py-12 border border-gray-200 col-span-2 md:col-span-1 text-gray-700 h-[100%]">
+          className="relative  bg-[var(--box)] rounded-3xl shadow-lg px-6 py-12 border border-gray-200 col-span-2 md:col-span-1 text-gray-700 h-[100%]">
           <h3 className="sm:text-xlg font-extrabold w-full   text-3xl  font-modam  text-center  sm:text-2xl md:text-lg text-[#4F7C6B] mb-4 leading-snug  ">
             کیفیت زندگی محله {Details.alley.name}
           </h3>

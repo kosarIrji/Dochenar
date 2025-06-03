@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Details from "../config/details.json";
 function History() {
   return (
-    <section className="my-7 bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+    <section className="my-7 bg-[var(--box)] rounded-2xl shadow-md p-8 border border-gray-100">
       <h3 className="sm:text-xlg  w-full   text-3xl  font-modam font-extrabold text-center  sm:text-3xl md:text-lg text-[#4F7C6B] mb-4 leading-snug ">
         تاریخچه محله {Details.alley.name}
       </h3>

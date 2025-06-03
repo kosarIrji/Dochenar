@@ -26,7 +26,7 @@ export default function ImageGallery() {
     setSelectedIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
 
   return (
-    <section className="relative my-7 bg-white rounded-3xl shadow-lg px-6 py-12 border border-gray-200">
+    <section className="relative my-7 bg-[var(--box)] rounded-3xl shadow-lg px-6 py-12 border border-gray-200">
       <div className="flex justify-center">
         <h2 className="absolute  sm:text-2xl md:text-lg font-extrabold text-[#4F7C6B] text-3xl font-bold text-center ">
           گالری تصاویر

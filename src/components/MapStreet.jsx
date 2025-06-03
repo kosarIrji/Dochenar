@@ -71,7 +71,7 @@ const Legend = ({ type }) => {
   };
 
   return (
-    <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg z-[1000] text-sm border border-gray-200 w-56 pointer-events-auto">
+    <div className="absolute bottom-4 right-4 bg-[var(--box)]/90 backdrop-blur-md p-4 rounded-xl shadow-lg z-[1000] text-sm border border-gray-200 w-56 pointer-events-auto">
       <div className="font-bold text-center text-gray-800 mb-3">
         راهنمای نقشه
       </div>
@@ -80,8 +80,7 @@ const Legend = ({ type }) => {
           <div key={idx} className="flex items-center gap-2">
             <div
               className="w-5 h-5 rounded-md border"
-              style={{ backgroundColor: item.color }}
-            ></div>
+              style={{ backgroundColor: item.color }}></div>
             <div className="text-gray-700 text-xs">{item.label}</div>
           </div>
         ))}
@@ -113,8 +112,7 @@ function BaseMapSwitcher({ setBaseLayerUrl }) {
         marginTop: "5px",
         color: "black",
       }}
-      className="text-sm p-1 border rounded-md transition-all ease-in-out hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-    >
+      className="text-sm p-1 border rounded-md transition-all ease-in-out hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
       <option value="carto">osm کلاسیک</option>
       <option value="light">Light (سبک)</option>
       <option value="dark">Dark (تاریک)</option>
@@ -166,23 +164,20 @@ export default function MapStreet() {
         height: isMobile ? "740px" : "full",
 
         width: "100%",
-      }}
-    >
+      }}>
       {/* کنترل‌ها */}
       <div className="absolute top-4 right-4 z-[1000] flex flex-col gap-2 pointer-events-auto">
         <div className="flex flex-col gap-2">
           <Button
             onClick={() => setLayerType("traffic")}
             variant={layerType === "traffic" ? "default" : "outline"}
-            className="transition-all ease-in-out hover:bg-blue-500 hover:text-white"
-          >
+            className="transition-all ease-in-out hover:bg-blue-500 hover:text-white">
             ترافیک
           </Button>
           <Button
             onClick={() => setLayerType("width")}
             variant={layerType === "width" ? "default" : "outline"}
-            className="transition-all ease-in-out hover:bg-blue-500 hover:text-white"
-          >
+            className="transition-all ease-in-out hover:bg-blue-500 hover:text-white">
             عرض معبر
           </Button>
         </div>
@@ -200,12 +195,8 @@ export default function MapStreet() {
         whenCreated={(mapInstance) => {
           mapRef.current = mapInstance;
           setTimeout(() => mapInstance.invalidateSize(), 100); // ⬅ رفع مشکل اولیه
-        }}
-      >
-        <TileLayer
-          url={baseLayerUrl}
-          attribution="&copy; OpenStreetMap contributors"
-        />
+        }}>
+        <TileLayer url={baseLayerUrl} />
         {geoData && <GeoJSON data={geoData} style={layerStyles[layerType]} />}
       </MapContainer>
 

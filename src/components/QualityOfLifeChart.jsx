@@ -20,7 +20,13 @@ const QualityOfLifeChart = ({ dataValues, names }) => {
   ];
 
   const colors = [
-   "#f28e2b","#59a14f",  "#4e79a7",  "#e15759", "#76b7b2", "#edc948", "#b07aa1"
+    "#f28e2b",
+    "#59a14f",
+    "#4e79a7",
+    "#e15759",
+    "#76b7b2",
+    "#edc948",
+    "#b07aa1",
   ];
 
   // تبدیل داده‌ها به فرمت مناسب نمودار
@@ -46,15 +52,14 @@ const QualityOfLifeChart = ({ dataValues, names }) => {
         textAnchor={textAnchor}
         fontSize={13}
         fill="#2c3e50"
-        fontWeight="500"
-      >
+        fontWeight="500">
         {payload.value}
       </text>
     );
   };
 
   return (
-    <div className="w-full  mx-auto bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
+    <div className="w-full  mx-auto bg-[var(--box)] rounded-2xl shadow-xl p-8 flex flex-col items-center">
       <h2 className="text-xl md:text-2xl font-extrabold text-[#4F7C6B] text-center mb-6">
         مقایسه کیفیت زندگی در محله‌ها
       </h2>
@@ -62,7 +67,11 @@ const QualityOfLifeChart = ({ dataValues, names }) => {
         <RadarChart cx="50%" cy="50%" outerRadius="75%" data={chartData}>
           <PolarGrid stroke="#ccc" />
           <PolarAngleAxis dataKey="subject" tick={renderCustomTick} />
-          <PolarRadiusAxis angle={30} domain={[0, 100]} tick={{ fontSize: 11 }} />
+          <PolarRadiusAxis
+            angle={30}
+            domain={[0, 100]}
+            tick={{ fontSize: 11 }}
+          />
           {names.map((name, index) => (
             <Radar
               key={name}

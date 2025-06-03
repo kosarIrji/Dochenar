@@ -13,7 +13,7 @@ import {
 // جایگزین موقتی Card و CardContent
 const Card = ({ children, className }) => (
   <div
-    className={`bg-white rounded-2xl shadow-md p-4 border border-gray-200 ${className}`}
+    className={`bg-[var(--box)] rounded-2xl shadow-md p-4 border border-gray-200 ${className}`}
   >
     {children}
   </div>

@@ -16,7 +16,7 @@ import SideBar from "./components/SideBar";
 
 function App() {
   return (
-    <div className="relative font-modam font-normal text-base bg-[#C4DAD2] text-stone-800">
+    <div className="relative font-modam font-normal text-base bg-[var(--background)] text-stone-800">
       <SideBar />
       <div className="pl-[8-px] pr-[8px] pb-5  md:pr-60 md:pl-5 ">
         {" "}
