@@ -23,17 +23,17 @@ const menuItems = [
   { id: "physical", label: "تحلیل کالبدی", icon: <Ruler size={18} /> },
   { id: "functional", label: "تحلیل عملکردی", icon: <Layers size={18} /> },
   { id: "accesses", label: "دسترسی‌ها", icon: <Map size={18} /> },
+  {
+    id: "priorities",
+    label: "سرمایه گذاری",
+    icon: <TrendingUp size={18} />,
+  },
   { id: "quality", label: "کیفیت زندگی", icon: <Heart size={18} /> },
   { id: "summary", label: "جمع‌بندی", icon: <ClipboardCheck size={18} /> },
   {
     id: "images",
     label: "گالری تصاویر",
     icon: <GalleryHorizontal size={18} />,
-  },
-  {
-    id: "priorities",
-    label: "اولویت های سزمایه گذاری",
-    icon: <TrendingUp size={18} />,
   },
 ];
 
