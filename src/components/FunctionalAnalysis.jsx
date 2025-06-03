@@ -14,7 +14,7 @@ export default function FunctionalAnalysis() {
       viewport={{ once: true }}>
       {/* ستون 1: متن و نمودار */}
       <div className="col-span-1 text-gray-700 bg-[var(--box)] rounded-2xl shadow-sm pl-6 pr-6 pt-6 border border-gray-200 mt-5 text-xl w-full">
-        <h3 className="font-extrabold text-3xl sm:text-2xl text-[#4F7C6B] text-center mb-4 leading-snug font-modam">
+        <h3 className="font-extrabold text-3xl sm:text-2xl text-[var(--main)] text-center mb-4 leading-snug font-modam">
           تحلیل عملکردی محله {details.alley.name}
         </h3>
         <p className="text-justify text-sm sm:text-base leading-loose ">

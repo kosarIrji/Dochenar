@@ -81,7 +81,7 @@ const TableSection = ({ columns, colCount }) => (
 export default function SWOTSummary() {
   return (
     <div className="space-y-4 w-full h-full p-6">
-      <h2 className="w-full font-bold text-[#4F7C6B] text-center">
+      <h2 className="w-full font-bold text-[var(--main)] text-center">
         جدول خلاصه تحلیل SWOT
       </h2>
 

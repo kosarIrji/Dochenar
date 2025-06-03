@@ -21,7 +21,7 @@ export default function Accesses() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}>
           <div className="text-gray-700 bg-[var(--box)] rounded-2xl shadow-sm p-6 border border-gray-200 mb-5 lg:grid-rows-2">
-            <h3 className="text-3xl sm:text-2xl  font-extrabold md:text-2xl font-modam text-center text-[#4F7C6B] mb-4 leading-snug lg:row-span-1">
+            <h3 className="text-3xl sm:text-2xl  font-extrabold md:text-2xl font-modam text-center text-[var(--main)] mb-4 leading-snug lg:row-span-1">
               دسترسی محله {Details.alley.name}
             </h3>
             <p className="text-sm sm:text-xs md:text-base text-justify md:leading-loose">

@@ -71,7 +71,7 @@ const Legend = ({ type }) => {
   };
 
   return (
-    <div className="absolute bottom-4 right-4 bg-[var(--box)]/90 backdrop-blur-md p-4 rounded-xl shadow-lg z-[1000] text-sm border border-gray-200 w-56 pointer-events-auto">
+    <div className="absolute bottom-4 right-4 bg-white backdrop-blur-md p-4 rounded-xl shadow-lg z-[1000] text-sm border border-gray-200 w-56 pointer-events-auto">
       <div className="font-bold text-center text-gray-800 mb-3">
         راهنمای نقشه
       </div>

@@ -4,7 +4,7 @@ export default function Priorities() {
   return (
     // main component
     <div className="flex flex-col overflow-hidden w-full items-center justify-center bg-[var(--box)] my-8 py-5 rounded-2xl">
-      <h3 className="sm:text-xlg font-extrabold w-full   text-3xl  font-modam  text-center  sm:text-2xl md:text-lg text-[#4F7C6B] mb-4 leading-snug  ">
+      <h3 className="sm:text-xlg font-extrabold w-full   text-3xl  font-modam  text-center  sm:text-2xl md:text-lg text-[var(--main)] mb-4 leading-snug  ">
         اولویت های سرمایه گذاری
       </h3>
       {/* itmes container */}

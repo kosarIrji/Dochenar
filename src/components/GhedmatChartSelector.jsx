@@ -75,8 +75,7 @@ export default function GhedmatChartSelector() {
         return (
           <BarChart
             data={data}
-            margin={{ top: 20, right: 40, left: 20, bottom: 70 }}
-          >
+            margin={{ top: 20, right: 40, left: 20, bottom: 70 }}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="name"
@@ -99,8 +98,7 @@ export default function GhedmatChartSelector() {
               dataKey="تعداد"
               name="تعداد ساختمان‌ها"
               barSize={25}
-              radius={[4, 4, 0, 0]}
-            >
+              radius={[4, 4, 0, 0]}>
               {data.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
@@ -114,8 +112,7 @@ export default function GhedmatChartSelector() {
         return (
           <LineChart
             data={data}
-            margin={{ top: 20, right: 40, left: 20, bottom: 70 }}
-          >
+            margin={{ top: 20, right: 40, left: 20, bottom: 70 }}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="name"
@@ -187,13 +184,14 @@ export default function GhedmatChartSelector() {
         <select
           value={chartType}
           onChange={(e) => setChartType(e.target.value)}
-          className="chart-type-select"
-        >
+          className="chart-type-select">
           <option value="bar">نمودار میله‌ای</option>
           <option value="line">نمودار خطی</option>
           <option value="pie">نمودار دایره‌ای</option>
         </select>
-        <h2 className="chart-title text-[#3A7CA5]">نمودار قدمت ساختمان‌ها</h2>
+        <h2 className="chart-title text-[var(--main)]">
+          نمودار قدمت ساختمان‌ها
+        </h2>
       </div>
 
       {loading ? (

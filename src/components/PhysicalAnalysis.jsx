@@ -16,7 +16,7 @@ function PhysicalAnalysis() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}>
         <div className="col-span-1 text-gray-700  bg-[var(--box)] rounded-2xl shadow-md shadow-[rgba(0,0,0,0.05)] shadow-lg:shadow-[rgba(0,0,0,0.08)] p-6 border border-gray-200 text-xl sm:text-xlg md:text-base ">
-          <h3 className="sm:text-3xl  w-full   text-3xl  font-modam font-extrabold text-center mb-4  md:text-lg text-[#4F7C6B]  leading-snug ">
+          <h3 className="sm:text-3xl  w-full   text-3xl  font-modam font-extrabold text-center mb-4  md:text-lg text-[var(--main)]  leading-snug ">
             تحلیل کالبدی محله {Details.alley.name}
           </h3>
           <p className="text-justify md:leading-loose md:pr-6 pr-2 mt-5 md:mt-5  text-sm sm:text-xs  lg:text-base md:text-base ">

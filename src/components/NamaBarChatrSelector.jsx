@@ -16,7 +16,6 @@ import {
   Legend,
 } from "recharts";
 
-
 const COLORS = [
   "#FF7073",
   "#EA9E8D",
@@ -75,8 +74,7 @@ export default function NamaChart() {
         return (
           <BarChart
             data={data}
-            margin={{ top: 20, right: 40, left: 20, bottom: 70 }}
-          >
+            margin={{ top: 20, right: 40, left: 20, bottom: 70 }}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="name"
@@ -85,15 +83,14 @@ export default function NamaChart() {
               interval={0}
               height={60}
             />
-            <YAxis width={10}  tick={{ textAnchor: "satrt", fontSize: 13 }}/>
+            <YAxis width={10} tick={{ textAnchor: "satrt", fontSize: 13 }} />
             <Tooltip formatter={(value) => [`${value} عدد`, "تعداد"]} />
             <Legend layout="horizontal" verticalAlign="bottom" />
             <Bar
               dataKey="تعداد"
               name="تعداد نماها"
               barSize={25}
-              radius={[4, 4, 0, 0]}
-            >
+              radius={[4, 4, 0, 0]}>
               {data.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
@@ -107,8 +104,7 @@ export default function NamaChart() {
         return (
           <LineChart
             data={data}
-            margin={{ top: 20, right: 40, left: 20, bottom: 40 }}
-          >
+            margin={{ top: 20, right: 40, left: 20, bottom: 40 }}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="name"
@@ -117,7 +113,7 @@ export default function NamaChart() {
               interval={0}
               height={80}
             />
-            <YAxis width={10}  tick={{ textAnchor: "satrt", fontSize: 13 }}/>
+            <YAxis width={10} tick={{ textAnchor: "satrt", fontSize: 13 }} />
             <Tooltip formatter={(value) => [`${value} عدد`, "تعداد"]} />
             <Legend layout="horizontal" verticalAlign="bottom" />
             <Line
@@ -139,8 +135,7 @@ export default function NamaChart() {
               outerRadius={100}
               dataKey="تعداد"
               nameKey="name"
-              label
-            >
+              label>
               {data.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
@@ -167,8 +162,7 @@ export default function NamaChart() {
         <select
           value={chartType}
           onChange={(e) => setChartType(e.target.value)}
-          className="chart-type-select"
-        >
+          className="chart-type-select">
           <option value="bar">نمودار میله‌ای</option>
           <option value="line">نمودار خطی</option>
           <option value="pie">نمودار دایره‌ای</option>
@@ -185,7 +179,6 @@ export default function NamaChart() {
           </ResponsiveContainer>
         </div>
       )}
-   
     </div>
   );
 }
