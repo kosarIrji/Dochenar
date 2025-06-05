@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { Button } from "./Button";
+import { Button } from "./UI/Button";
 const isMobile = window.innerWidth < 768;
 const isLaptop = window.innerWidth < 1000;
 
@@ -244,15 +244,27 @@ const MapAnalysis = () => {
     }
   }, [map, geoData]);
 
+  const [screenSize, setScreenSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  const [currentScreenHeight, setCurrentScreenHeight] = useState(
+    window.innerHeight
+  );
+  useEffect(() => {
+    setCurrentScreenHeight(window.innerHeight);
+  }, [window.innerWidth]);
+
   return (
-    <div style={{ direction: "rtl", fontFamily: "Modam" }}>
-      <div style={{ position: "relative" }}>
+    <div className="h-full" style={{ direction: "rtl", fontFamily: "Modam" }}>
+      <div className="h-full" style={{ position: "relative" }}>
         <div
           id="map"
           ref={mapRef}
           style={{
             borderRadius: "10px",
-            height: isMobile ? (isLaptop ? "500px" : "500px") : "660px",
+            height: "100%",
             width: "100%",
           }}></div>
 

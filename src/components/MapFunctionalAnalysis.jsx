@@ -8,7 +8,7 @@ const MapLanduse = () => {
   const mapRef = useRef(null);
   const [mapInstance, setMapInstance] = useState(null);
   const tileLayerRef = useRef(null);
-  console.log(mapInstance);
+  // console.log(mapInstance);
   const baseMaps = {
     osm: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     dark: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",

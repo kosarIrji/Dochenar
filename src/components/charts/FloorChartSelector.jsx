@@ -204,7 +204,7 @@ export default function EnhancedFloorChart() {
         </div>
       )}
 
-      <style jsx>{`
+      <style>{`
         .chart-container {
           font-family: "Modam", Tahoma, sans-serif;
           direction: rtl;

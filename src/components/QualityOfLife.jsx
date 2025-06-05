@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import QualityOfLifeChart from "./QualityOfLifeChart";
+import QualityOfLifeChart from "./charts/QualityOfLifeChart";
 import Details from "../config/details.json";
 export default function QualityOfLife() {
   const data = [

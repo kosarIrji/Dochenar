@@ -17,7 +17,8 @@ body {
 }
 :root {
   --background: #eed1d1;
-  --sideBar: #260404;
-  --box: #e5e2df;
+  --sideBar: #550909;
+  /* Default sideBar : #260404 */
+  --box: #ffffff;
   --main: #ca3433;
 }

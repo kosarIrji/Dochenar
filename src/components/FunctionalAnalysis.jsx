@@ -1,4 +1,4 @@
-import FunctionalPieChart from "./FunctionalPieChart";
+import FunctionalPieChart from "./charts/FunctionalPieChart";
 import MapFunctionalAnalysis from "./MapFunctionalAnalysis";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";

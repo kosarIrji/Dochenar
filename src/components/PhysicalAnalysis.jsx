@@ -1,8 +1,8 @@
 import Details from "../config/details";
 import MapAnalysis from "./MapAnalysis";
-import NamaBarChart from "./NamaBarChatrSelector";
-import FloorChartSelector from "./FloorChartSelector";
-import GhedmatChartSelector from "./GhedmatChartSelector";
+import NamaBarChart from "./charts/NamaBarChatrSelector";
+import FloorChartSelector from "./charts/FloorChartSelector";
+import GhedmatChartSelector from "./charts/GhedmatChartSelector";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 

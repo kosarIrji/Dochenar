@@ -1,7 +1,7 @@
 import React from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import Details from "../config/details.json";
+import Details from "../../config/details.json";
 import { ShieldCheck, WarningOctagon, TrendUp, Skull } from "phosphor-react";
 
 // ستون‌ها با آیکون حرفه‌ای

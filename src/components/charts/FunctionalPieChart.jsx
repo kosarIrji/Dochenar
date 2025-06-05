@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as XLSX from "xlsx";
-import { Button } from "./Button";
+import { Button } from "../UI/Button";
 import {
   PieChart,
   Pie,
@@ -12,25 +12,24 @@ import {
 
 // دکمه سفارشی حرفه‌ای
 
-
 const CustomLegend = ({ payload }) => {
   return (
-    <ul style={{
-      listStyle: "none",
-      padding: 0,
-      margin: 0,
-      textAlign: "center",
-      direction: "rtl"
-    }}>
-      {payload.map((entry, index) => (
+    <ul
+      style={{
+        listStyle: "none",
+        padding: 0,
+        margin: 0,
+        textAlign: "center",
+        direction: "rtl",
+      }}>
+      {payload.map((entry, i) => (
         <li
-          key={`item-${index}`}
+          key={`item-${i}`}
           style={{
             display: "inline-flex",
             alignItems: "center",
-            margin: "0 12px"
-          }}
-        >
+            margin: "0 12px",
+          }}>
           <span
             style={{
               display: "inline-block",
@@ -46,8 +45,7 @@ const CustomLegend = ({ payload }) => {
               color: "#000",
               fontSize: 14,
               fontFamily: "Modam",
-            }}
-          >
+            }}>
             {entry.value}
           </span>
         </li>
@@ -113,8 +111,8 @@ export default function KarbariExcelPieChart() {
   }, []);
 
   const chartContainerStyle = {
-   
     borderRadius: "1rem",
+    width: "100%",
     padding: "3rem",
     flex: "1 1 400px",
     display: "flex",
@@ -132,39 +130,35 @@ export default function KarbariExcelPieChart() {
 
   if (freqData.length === 0 || areaData.length === 0) {
     return (
-      <div style={{ textAlign: "center"}}>
-        داده‌ای برای نمایش وجود ندارد.
-      </div>
+      <div style={{ textAlign: "center" }}>داده‌ای برای نمایش وجود ندارد.</div>
     );
   }
 
   return (
     <div style={{ textAlign: "center" }}>
-
       {/* دکمه انتخاب نمودار */}
       <div className="flex gap-5 justify-center">
         <Button
           onClick={() => setSelectedChart("freq")}
-          variant={selectedChart === "freq" ? "default" : "outline"}
-        >
+          variant={selectedChart === "freq" ? "default" : "outline"}>
           بر اساس فراوانی
         </Button>
         <Button
           onClick={() => setSelectedChart("area")}
-          variant={selectedChart === "area" ? "default" : "outline"}
-        >
+          variant={selectedChart === "area" ? "default" : "outline"}>
           بر اساس مساحت
         </Button>
       </div>
       {/* نمودار انتخاب‌شده */}
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div style={chartContainerStyle}>
-          <h3 style={{
-            marginBottom: "1rem",
-            color: "#3A7CA5",
-            fontSize: "1rem",
-            fontWeight: "bold"
-          }}>
+          <h3
+            className="text-[var(--main)]"
+            style={{
+              marginBottom: "1rem",
+              fontSize: "1rem",
+              fontWeight: "bold",
+            }}>
             {selectedChart === "freq"
               ? "نمودار نوع کاربری بر اساس فراوانی"
               : "نمودار نوع کاربری بر اساس مساحت"}
@@ -180,11 +174,12 @@ export default function KarbariExcelPieChart() {
                   outerRadius={80}
                   label
                   dataKey={selectedChart === "freq" ? "تعداد" : "مساحت"}
-                  nameKey="name"
-                >
-                  {(selectedChart === "freq" ? freqData : areaData).map((entry, idx) => (
-                    <Cell key={`chart-${idx}`} fill={entry.color} />
-                  ))}
+                  nameKey="name">
+                  {(selectedChart === "freq" ? freqData : areaData).map(
+                    (entry, idx) => (
+                      <Cell key={`chart-${idx}`} fill={entry.color} />
+                    )
+                  )}
                 </Pie>
                 <Tooltip
                   formatter={(value) => [
@@ -193,7 +188,6 @@ export default function KarbariExcelPieChart() {
                   ]}
                 />
                 <Legend
-      
                   layout="horizontal"
                   verticalAlign="bottom"
                   align="center"

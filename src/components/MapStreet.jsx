@@ -1,14 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { Button } from "./Button";
+import { Button } from "./UI/Button";
 import L from "leaflet";
 const isMobile = window.innerWidth < 768;
 
 // رنگ بر اساس ترافیک
 const getColorByTraffic = (value) => {
-  const strVal = String(value).trim();
-  switch (strVal) {
+  switch (String(value).trim()) {
     case "5":
       return "#d73027";
     case "4":

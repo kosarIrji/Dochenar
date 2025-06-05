@@ -1,4 +1,4 @@
-import SummaryChart from "./SummryChart";
+import SummaryChart from "./charts/SummryChart";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import Details from "../config/details.json";

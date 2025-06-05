@@ -7,6 +7,6 @@
 
 1. change theme combo and and images
 2. try to fix responsive issue of Priority component
-3. add data to charts
+3. add (KARBARI.xlsx & Keyfiat_mabar.xlsx)
 4. carosel mode for satellite images
 5.
