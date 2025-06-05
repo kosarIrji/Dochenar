@@ -63,5 +63,16 @@
       "opportunities": ".",
       "threats": "."
     }
+  ],
+  "introImageSrc": "/images/introMap.jpg",
+  "miniMaps": [
+    {
+      "src": "/images/2005.png",
+      "year": "1383"
+    },
+    {
+      "src": "/images/2025.png",
+      "year": "1404"
+    }
   ]
 }

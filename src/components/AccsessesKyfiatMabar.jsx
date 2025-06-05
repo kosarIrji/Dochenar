@@ -88,7 +88,11 @@ const AccsessesKyfiatMabar = () => {
       }}>
       <h2
         className="text-base"
-        style={{ textAlign: "center", color: "#4F7C6B", fontWeight: "bold" }}>
+        style={{
+          textAlign: "center",
+          color: "text-[var(--main)]",
+          fontWeight: "bold",
+        }}>
         نمودار کیفیت معابر محله
       </h2>
 

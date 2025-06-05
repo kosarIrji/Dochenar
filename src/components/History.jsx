@@ -13,10 +13,7 @@ function History() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8  lg:grid-cols-2">
-        {[
-          { year: "۱۳۸۵", src: "./images/1385.jpg" },
-          { year: "۱۴۰۴ ", src: "./images/1404.jpg" },
-        ].map((item, index) => (
+        {Details.miniMaps.map((item, index) => (
           <motion.div
             key={index}
             className="flex flex-col items-center "
@@ -26,7 +23,7 @@ function History() {
             <img
               src={item.src}
               alt={`محله ${Details.alley.name} در سال ${item.year}`}
-              className="rounded-xl shadow-md w-full md:max-w-[600px]  object-cover"
+              className="rounded-xl shadow-md w-full md:max-w-[600px] md:min-h-[600px] object-cover"
             />
             <p className="text-center  mt-3 text-gray-500 sm:sm text-sm md:text-base leading-relaxed">
               محله {Details.alley.name} - سال {item.year}

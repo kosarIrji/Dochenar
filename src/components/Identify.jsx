@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import Details from "../config/details";
+
 function Identify() {
+  const imageAlt = `محله ${Details.alley.name} در سال ۲۰۲۵`;
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 30 }}
@@ -71,8 +74,8 @@ function Identify() {
       </div>
 
       <motion.img
-        src="./images/basij.png"
-        alt="محله بسیج در سال ۲۰۲۵"
+        src={Details.introImageSrc}
+        alt={imageAlt}
         initial={{ scale: 0.95, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
