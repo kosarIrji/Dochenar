@@ -12,7 +12,9 @@ export default function Priorities() {
         {/* Box 1 */}
         <div
           className="rounded-xl shadow p-6 flex flex-col items-center w-full max-w-2xl"
-          style={{ backgroundColor: "#B1B2B9" }}>
+          style={{
+            background: "linear-gradient(135deg, #B1B2B9 0%, #F0E9E6 100%)",
+          }}>
           <h2 className="text-lg font-bold mb-2 text-gray-800">
             مشارکت در ساخت و نوساز
           </h2>
@@ -23,7 +25,9 @@ export default function Priorities() {
         {/* Box 2 */}
         <div
           className="rounded-xl shadow p-6 flex flex-col items-center w-full max-w-2xl"
-          style={{ backgroundColor: "#272E36" }}>
+          style={{
+            background: "linear-gradient(135deg, #272E36 0%, #5B5D62 100%)",
+          }}>
           <h2 className="text-lg font-bold mb-2 text-white">
             مشارکت در ساخت نوساز
           </h2>
@@ -34,7 +38,9 @@ export default function Priorities() {
         {/* Box 3 */}
         <div
           className="rounded-xl shadow p-6 flex flex-col items-center w-full max-w-2xl"
-          style={{ backgroundColor: "#F0E9E6" }}>
+          style={{
+            background: "linear-gradient(135deg, #F0E9E6 0%, #B1B2B9 100%)",
+          }}>
           <h2 className="text-lg font-bold mb-2 text-gray-900">
             خرید ملک نوساز
           </h2>
@@ -46,7 +52,9 @@ export default function Priorities() {
         {/* Box 4 */}
         <div
           className="rounded-xl shadow p-6 flex flex-col items-center w-full max-w-2xl"
-          style={{ backgroundColor: "#5B5D62" }}>
+          style={{
+            background: "linear-gradient(135deg, #5B5D62 0%, #272E36 100%)",
+          }}>
           <h2 className="text-lg font-bold mb-2 text-white">
             ریسک سرمایه گذاری
           </h2>
