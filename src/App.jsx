@@ -4,7 +4,7 @@
 import "./App.css";
 import Identify from "./components/Identify";
 import History from "./components/History";
-
+import Priorities from "./components/Priorities";
 import PhysicalAnalysis from "./components/PhysicalAnalysis";
 import FunctionalAnalysis from "./components/FunctionalAnalysis";
 import QualityOfLife from "./components/QualityOfLife";
@@ -16,8 +16,8 @@ import SideBar from "./components/SideBar";
 
 function App() {
   return (
-    <div className="relative font-modam font-normal text-base bg-[#C4DAD2] text-stone-800">
-       <SideBar />
+    <div className="relative font-modam font-normal text-base bg-[var(--background)] text-stone-800">
+      <SideBar />
       <div className="pl-[8-px] pr-[8px] pb-5  md:pr-60 md:pl-5 ">
         {" "}
         {/* حاشیه راست برای نوبار */}
@@ -37,9 +37,13 @@ function App() {
           <div id="accesses">
             <Accesses />
           </div>
+          <div id="priorities">
+            <Priorities />
+          </div>
           <div id="quality">
             <QualityOfLife />
           </div>
+
           <div id="summary">
             <Summary />
           </div>
@@ -47,8 +51,7 @@ function App() {
             <ImageGallery />
           </div>
         </Container>
-      </div> 
-      
+      </div>
     </div>
   );
 }

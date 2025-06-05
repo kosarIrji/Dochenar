@@ -2,16 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 @theme {
-  --color-light-gray: #B1B2B9;
+  --color-light-gray: #b1b2b9;
   --color-dark-slate: #272e36;
-  --color-off-white: #F0E9E6;
-  --color-medium-gray: #9095A1;
+  --color-off-white: #f0e9e6;
+  --color-medium-gray: #9095a1;
   --color-slate-gray: #6b5d62;
   --color-dark-blue: #191f25;
   --my-primary: #272e36;
-  --my-secondary: #f0E9E6;
+  --my-secondary: #f0e9e6;
   --my-accent: #9095a1;
 }
 body {
   @apply font-modam;
+}
+:root {
+  --background: #eed1d1;
+  --sideBar: #550909;
+  /* Default sideBar : #260404 */
+  --box: #ffffff;
+  --main: #ca3433;
 }

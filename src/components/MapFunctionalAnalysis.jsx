@@ -8,7 +8,7 @@ const MapLanduse = () => {
   const mapRef = useRef(null);
   const [mapInstance, setMapInstance] = useState(null);
   const tileLayerRef = useRef(null);
-  console.log(mapInstance);
+  // console.log(mapInstance);
   const baseMaps = {
     osm: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     dark: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
@@ -149,8 +149,7 @@ const MapLanduse = () => {
           height: isMobile ? (isLaptop ? "500px" : "500px") : "800px",
 
           width: "100%",
-        }}
-      ></div>
+        }}></div>
       <style>{`
         @font-face {
           font-family: 'Modam';
@@ -168,7 +167,7 @@ const MapLanduse = () => {
 
         .legend {
           font-family: 'Modam';
-          background: white;
+          background: rgba(229 226 223,0.9);
           padding: 10px;
           border-radius: 5px;
           box-shadow: 0 0 5px #aaa;

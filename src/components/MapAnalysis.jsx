@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { Button } from "./Button";
+import { Button } from "./UI/Button";
 const isMobile = window.innerWidth < 768;
 const isLaptop = window.innerWidth < 1000;
 
@@ -93,23 +93,19 @@ const MapAnalysis = () => {
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"),
     dark: () =>
       L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-        { attribution: "&copy; CartoDB" }
+        "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
       ),
     light: () =>
       L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-        { attribution: "&copy; CartoDB" }
+        "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       ),
     carto: () =>
       L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
-        { attribution: "&copy; CartoDB" }
+        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png"
       ),
     esri: () =>
       L.tileLayer(
-        "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{x}/{y}",
-        { attribution: "&copy; Esri" }
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{x}/{y}"
       ),
   };
 
@@ -248,18 +244,29 @@ const MapAnalysis = () => {
     }
   }, [map, geoData]);
 
+  const [screenSize, setScreenSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  const [currentScreenHeight, setCurrentScreenHeight] = useState(
+    window.innerHeight
+  );
+  useEffect(() => {
+    setCurrentScreenHeight(window.innerHeight);
+  }, [window.innerWidth]);
+
   return (
-    <div style={{ direction: "rtl", fontFamily: "Modam" }}>
-      <div style={{ position: "relative" }}>
+    <div className="h-full" style={{ direction: "rtl", fontFamily: "Modam" }}>
+      <div className="h-full" style={{ position: "relative" }}>
         <div
           id="map"
           ref={mapRef}
           style={{
             borderRadius: "10px",
-            height: isMobile ? (isLaptop ? "500px" : "500px") : "660px",
+            height: "100%",
             width: "100%",
-          }}
-        ></div>
+          }}></div>
 
         <div
           style={{
@@ -270,24 +277,20 @@ const MapAnalysis = () => {
             display: "flex",
             flexDirection: "column",
             gap: "8px",
-          }}
-        >
+          }}>
           <Button
             onClick={() => handleMapTypeChange("tdad_tbqe")}
-            variant={layerType === "tdad_tbqe" ? "default" : "outline"}
-          >
+            variant={layerType === "tdad_tbqe" ? "default" : "outline"}>
             نقشه طبقات
           </Button>
           <Button
             onClick={() => handleMapTypeChange("qdmt")}
-            variant={layerType === "qdmt" ? "default" : "outline"}
-          >
+            variant={layerType === "qdmt" ? "default" : "outline"}>
             نقشه قدمت
           </Button>
           <Button
             onClick={() => handleMapTypeChange("nama")}
-            variant={layerType === "nama" ? "default" : "outline"}
-          >
+            variant={layerType === "nama" ? "default" : "outline"}>
             نقشه نما
           </Button>
           <select
@@ -299,8 +302,7 @@ const MapAnalysis = () => {
               border: "1px solid #ccc",
               marginTop: "5px",
               color: "black",
-            }}
-          >
+            }}>
             <option value="light">Light (سبک)</option>
             <option value="osm">OSM کلاسیک</option>
             <option value="dark">Dark (تاریک)</option>
