@@ -21,7 +21,8 @@ export default function QualityOfLife() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative  bg-[var(--box)] rounded-3xl shadow-lg px-6 py-12 border border-gray-200 col-span-2 md:col-span-1 text-gray-700 h-[100%]">
+          className="relative  bg-[var(--box)] rounded-3xl shadow-lg px-6 py-12 border border-gray-200 col-span-2 md:col-span-1 text-gray-700 h-[100%]"
+        >
           <h3 className="sm:text-xlg font-extrabold w-full   text-3xl  font-modam  text-center  sm:text-2xl md:text-lg text-[var(--main)] mb-4 leading-snug  ">
             کیفیت زندگی محله {Details.alley.name}
           </h3>
@@ -36,6 +37,10 @@ export default function QualityOfLife() {
             🏘️ کیفیت کالبدی: {Details.qualities.quality}
             <br />
             🌱 فضای سبز و آسایش: {Details.qualities.greenSpace}
+            <br />
+            🚗نرافیک: معابر باریک، یک طرفه بودن معابر داخلی، دسترسی مناسب به حمل
+            و نقل عمومی، دسترسی مطلوب به شریان های اصلی شهر، ترافیک بالا معابر
+            <div className="trafik"></div>
           </p>
         </motion.div>
 
@@ -44,7 +49,8 @@ export default function QualityOfLife() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="col-span-2 md:col-span-1  h-full">
+          className="col-span-2 md:col-span-1  h-full"
+        >
           <QualityOfLifeChart dataValues={data} names={names} />
         </motion.div>
       </div>
