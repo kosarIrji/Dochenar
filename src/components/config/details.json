@@ -1,0 +1,76 @@
+{
+  "alley": {
+    "name": "دوچنار  ",
+    "code": "1404/05/13",
+    "area": " 29 ",
+    "population": " 5300  ",
+    "rate": "3.5"
+  },
+  "location": "",
+  "history": "",
+  "physicalAnalysis": "",
+
+  "functionalAnalysis": "",
+  "accessability": " ",
+  "overallAnalysis": "",
+  "qualities": {
+    "security": "",
+    "vitality": "",
+    "accessability": "",
+    "quality": "",
+    "greenSpace": "",
+    "trafic": ""
+  },
+  "priorities": [
+    {
+      "title": "",
+      "context": ""
+    },
+    {
+      "title": "",
+      "context": ""
+    },
+    {
+      "title": "",
+      "context": ""
+    },
+    {
+      "title": "",
+      "context": ""
+    }
+  ],
+  "conclusion": "",
+  "prosAndCons": [
+    {
+      "strengths": "موقعیت مرکزی و دسترسی مناسب به سایر نقاط شهر",
+      "weaknesses": "ترافیک در محله و معابر اطراف همچنین عرض کم معابر",
+      "opportunities": "فرصت های مشارکت در ساخت، به ویژه در املاک فرسوده و زمین های بایر",
+      "threats": "فرسودگی بخش زیادی از بافت در آینده نزدیک"
+    },
+    {
+      "strengths": "وجود فعالیت های تجاری (بازار) و دسترسی به خدمات متنوع",
+      "weaknesses": "فرسودگی بخش زیادی از بافت ",
+      "opportunities": "امکان توسعه فضاهای سبز با تغییر کاربری ها ",
+      "threats": "کاهش کیفیت زندگی به دلیل ازدحام و شلوغی در مرکز شهر"
+    },
+    {
+      "strengths": "قدمت  و پیشینه تاریخی محله ",
+      "weaknesses": "قدمت  و پیشینه تاریخی محله  ",
+      "opportunities": "بهبود زیرساخت‌های پیاده‌روی",
+      "threats": "بهبود زیرساخت‌های پیاده‌روی"
+    },
+    {
+      "strengths": "حضور فعال مردم در محله (پویایی)",
+      "weaknesses": "تعداد بالای املاک غیرقابل سکونت و زمین بایر",
+      "opportunities": "فرصت ساخت و ساز متراکم  و استفاده بهتر از زمین ",
+      "threats": "."
+    },
+    {
+      "strengths": ".",
+      "weaknesses": ".",
+      "opportunities": "کمبود فضای سبز(پارک)",
+      "threats": "."
+    }
+  ]
+  
+}
